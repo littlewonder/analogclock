@@ -1,0 +1,90 @@
+body{
+    background: #9c27b0;
+}
+
+#clock{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+#boundary {
+    border-radius: 50%;
+    background-color: rgb(156, 39, 176);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 22vw;
+    height: 22vw;
+    z-index: 5;
+    border: 0.5vw solid white;
+box-shadow: 10px 10px 80px 10px rgba(111,0,133,1);
+
+}
+
+#c1{
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;    
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 2vw;
+    height: 2vw;
+    z-index: 7;
+}
+
+#c2{
+    border-radius: 50%;
+    background-color: rgb(222, 30, 255);
+    position: absolute;    
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 1.4vw;
+    height: 1.4vw;
+    z-index: 10;
+}
+
+#hour {
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in;
+    background-color: rgb(255,255, 255);
+    position: relative;
+    width: 0.8vw;
+    height: 100px;
+    z-index: 4; 
+    transform-origin: 50% 100%;
+    top: 6vw;
+    border-radius: 5px;
+}
+
+#minute {
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in;
+    background-color: rgb(255,255, 255);
+    position: relative;
+    width: 0.8vw;
+    height: 150px;
+    z-index: 3; 
+    transform-origin: 50% 100%;
+    top: -2.2vw;
+    border-radius: 5px;
+}
+
+#second {
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in;
+    background-color: rgb(222, 30, 255);
+    position: relative;
+    width: 3px;
+    height: 162px;
+    z-index: 11; 
+    transform-origin: 50% 100%;
+    top: -11vw;
+
+}
