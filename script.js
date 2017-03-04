@@ -38,7 +38,6 @@ window.setInterval(function () {
     }
     seconds_degree = ((seconds / 60) * 360);
     var degree = "rotate(" + seconds_degree + "deg)";
-    console.log(degree);
     secondHand.style.transform = degree;
     minute = master.getMinutes();
     minute_degree = (((minute / 60) * 360) );
