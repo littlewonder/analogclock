@@ -1,7 +1,7 @@
 var secondHand = document.getElementById("second");
 var hourHand = document.getElementById("hour");
 var minuteHand = document.getElementById("minute");
-
+var mute = 0;
 function callit() {
     var master, seconds, seconds_degree, minute, minute_degree, hours, hours_degree;
     master = new Date();
@@ -29,6 +29,14 @@ function callit() {
 callit();
 
 window.setInterval(function () {
+    switch(mute){
+        case(1):
+            document.getElementById("sound").pause();
+            break;
+        case(0):
+            document.getElementById("sound").play();
+            break;
+    }
     "use strict";
     var master, seconds, seconds_degree, minute, minute_degree, hours, hours_degree;
     master = new Date();
@@ -48,3 +56,18 @@ window.setInterval(function () {
     var hdegree = "rotate(" + hours_degree + "deg)";
     hourHand.style.transform = hdegree;
 }, 1000);
+
+var togglemuteflag = function(){
+    var button = document.getElementById("btn");
+    switch(mute){
+        case(1):
+            mute = 0;
+            button.src="volume.png";
+            break;
+        case(0):
+            mute = 1;
+            button.src="mute.png";
+            break;
+    }
+};
+
