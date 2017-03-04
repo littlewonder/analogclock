@@ -6,6 +6,9 @@ function callit() {
     var master, seconds, seconds_degree, minute, minute_degree, hours, hours_degree;
     master = new Date();
     seconds = master.getSeconds();
+    if(seconds === 0){
+        seconds = 60;
+    }
     seconds_degree = ((seconds / 60) * 360) ;
     var degree = "rotate(" + seconds_degree + "deg)";
     secondHand.style.transform = degree;
@@ -30,8 +33,12 @@ window.setInterval(function () {
     var master, seconds, seconds_degree, minute, minute_degree, hours, hours_degree;
     master = new Date();
     seconds = master.getSeconds();
+    if(seconds === 0){
+        seconds = 60;
+    }
     seconds_degree = ((seconds / 60) * 360);
     var degree = "rotate(" + seconds_degree + "deg)";
+    console.log(degree);
     secondHand.style.transform = degree;
     minute = master.getMinutes();
     minute_degree = (((minute / 60) * 360) );
