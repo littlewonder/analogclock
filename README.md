@@ -1,2 +1,2 @@
 # Analog Clock using VanillaJS
-### [Live Demo](http://abhisheksharma.design/analogclock)
+### [Live Demo](http://littlewonder.github.io/analogclock)
